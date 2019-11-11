@@ -363,14 +363,14 @@ export default class Transaction {
       return
     }
 
-    const isValidEIP155V =
-      vInt === this.getChainId() * 2 + 35 || vInt === this.getChainId() * 2 + 36
-
-    if (!isValidEIP155V) {
-      throw new Error(
-        `Incompatible EIP155-based V ${vInt} and chain id ${this.getChainId()}. See the second parameter of the Transaction constructor to set the chain id.`,
-      )
-    }
+    // const isValidEIP155V =
+    //   vInt === this.getChainId() * 2 + 35 || vInt === this.getChainId() * 2 + 36
+    //
+    // if (!isValidEIP155V) {
+    //   throw new Error(
+    //     `Incompatible EIP155-based V ${vInt} and chain id ${this.getChainId()}. See the second parameter of the Transaction constructor to set the chain id.`,
+    //   )
+    // }
   }
 
   private _isSigned(): boolean {
